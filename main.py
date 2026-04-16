@@ -214,7 +214,7 @@ while is_running:
                     save_cancel_button = None
             elif event.ui_element == save_button:
                 dialog_width, dialog_height = 300, 120
-                save_dialog = pygame_gui.windows.UIWindow(
+                save_dialog = pygame_gui.elements.UIWindow(
                     rect=pygame.Rect(
                         (WIDTH - dialog_width) // 2,
                         (HEIGHT - dialog_height) // 2,
