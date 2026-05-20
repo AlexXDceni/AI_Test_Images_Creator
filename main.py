@@ -244,7 +244,7 @@ while is_running:
                     container=save_dialog,
                 )
 
-    if pygame.mouse.get_pressed()[0]:
+    if pygame.mouse.get_pressed()[0] and save_dialog is None:
         if (
             GRID_START_OX <= mouse_pos[0] <= GRID_END_OX
             and GRID_START_OY <= mouse_pos[1] <= GRID_END_OY
@@ -254,7 +254,7 @@ while is_running:
             if 0 <= grid_x < PIXELS_WIDTH and 0 <= grid_y < PIXELS_HEIGHT:
                 pixels[(grid_x, grid_y)] = current_color
 
-    if pygame.mouse.get_pressed()[2]:
+    if pygame.mouse.get_pressed()[2] and save_dialog is None:
         if (
             GRID_START_OX <= mouse_pos[0] <= GRID_END_OX
             and GRID_START_OY <= mouse_pos[1] <= GRID_END_OY
